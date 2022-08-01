@@ -26,7 +26,7 @@ struct Person {
 }
 ```
 
-Then, besides `Person(name:age:)`, you’ll also get `Person()`, `Person(name:)`, and `Person(name:age:)` without having to write any extra code. This is wonderful, particularly when
+Then, besides `Person(name:age:)`, you’ll also get `Person()`, `Person(name:)`, and `Person(age:)` without having to write any extra code. This is wonderful, particularly when
 you want some kind of stand-in instance.
 
 Should you want to add another field with a default value to the struct, say `phoneNumber`,
