@@ -24,7 +24,7 @@ struct Person {
 }
 ```
 
-Then, besides `Person(name:age:)`, you’ll also get `Person()`, `Person(name:)`, and `Person(name: age:)` without having to write any extra code. This is wonderful, particularly when
+Then, besides `Person(name:age:)`, you’ll also get `Person()`, `Person(name:)`, and `Person(name:age:)` without having to write any extra code. This is wonderful, particularly when
 you want some kind of stand-in object.
 
 Should you want to add another field with a default value to the struct, say `phoneNumber`,
@@ -78,7 +78,7 @@ In order not to break existing clients of `Person`, we had to modify
  three different lines, compared to the one-line change we did
 do above.
 
-Now, ergonomics improve a lot if you use a parameter-less `init`, and configure the instance
+Ergonomics improve a lot if you use a parameter-less `init`, and configure the instance
 _a posteriori_.
 
 ```swift
