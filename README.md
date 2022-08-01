@@ -121,3 +121,28 @@ let john = Person().tap { john in
 ```
 
 Now you have structs that are easy to change across modules, and your code is as clear as if you were using your synthesized initializers.
+
+If your struct also complies with `DefaultConstructible` (provided by us), you can be
+even more succint by using `.tap` as a static function. I find this particularly 
+useful when deriving structs in The Composable Architecture:
+
+```swift
+public struct PersonState: Equatable, Tappable, DefaultConstructible {
+    public init() {}
+
+    public var name: String = ""
+    public var age: Int = 0
+}
+
+struct AppState: Equatable {
+    public var name: String = ""
+    public var age: Int = 0
+
+    var personState: PersonState {
+        .tap { state in
+            state.name = name
+            state.age = age
+        }
+    }
+}
+```
