@@ -1,5 +1,5 @@
 # Tap
-Tap is a tiny library (11 LOC!) that lets you configure objects after
+Tap is a tiny library (11 LOC!) that lets you configure instances after
 their initialization without sacrificing your code’s semantics.
 It works similarly to Ruby’s `#tap`.
 
@@ -14,7 +14,7 @@ struct Person {
 ```
 
 Without any extra work, you get an initializer, `Person(name:age:)`. If you turn the `let`s
-into `var`s and provide default values, you get even more initializers. If you have
+into `var`s and provide default values, you get even more initializers. Imagine
 this `Person` instead:
 
 ```swift
@@ -25,7 +25,7 @@ struct Person {
 ```
 
 Then, besides `Person(name:age:)`, you’ll also get `Person()`, `Person(name:)`, and `Person(name:age:)` without having to write any extra code. This is wonderful, particularly when
-you want some kind of stand-in object.
+you want some kind of stand-in instance.
 
 Should you want to add another field with a default value to the struct, say `phoneNumber`,
 
