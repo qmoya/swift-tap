@@ -3,6 +3,8 @@ Tap is a tiny library (11 LOC!) that lets you configure instances after
 their initialization without sacrificing your code’s semantics.
 It works similarly to Ruby’s `#tap`.
 
+![Logo](docs/images/logo.png | width=100)
+
 ## The problem
 The ergonomics of Swift’s `struct`s are great. Picture this one:
 
