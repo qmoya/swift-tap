@@ -101,7 +101,7 @@ john.age = 41
 Now, adding a new field will have a more manageable ripple effect.
 
 However, I’d argue the code is weaker now. We’ve detached
-initialization from configuration, so it doesn’t reveal intention as clearly as
+initialization from configuration, so it doesn’t reveal intention as clearly as 
 before. Plus,
 it may be semantically incorrect: now `john` is forcefully a `var`,
 regardless of whether we want to mutate it afterward or not.
@@ -131,7 +131,7 @@ Note that `Tap` also improves ergonomics in another way: whereas initializers re
 constraint.
 
 If your struct complies with `DefaultConstructible` (provided by us), you can be
-even more succinct by using `.tap` as a static function. I find this particularly
+even more succinct by using `.tap` as a static function. I find this particularly 
 useful when deriving structs in The Composable Architecture:
 
 ```swift
