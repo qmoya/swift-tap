@@ -8,23 +8,11 @@ on:
 
 jobs:
   build:
-
-    runs-on: macos-latest
+    runs-on: macos-12
 
     steps:
     - uses: actions/checkout@v3
-    - name: Setup Xcode version
-      uses: maxim-lobanov/setup-xcode@v1.4.1
     - name: Build
       run: swift build -v
     - name: Run tests
       run: swift test -v
-      
-  docs:
-    runs-on: macos-latest
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Build docs
-      run: swift package --allow-writing-to-directory docs generate-documentation --target Tap --disable-indexing --transform-for-static-hosting --hosting-base-path qmoya.github.io/tap --output-path docs
-
